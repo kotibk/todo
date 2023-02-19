@@ -1,0 +1,160 @@
+body {
+  background-color: black;
+  font-family: 'Rokkitt';
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.forAndroid {
+  
+  position: relative;
+  margin: 0 auto;
+  width: 360px;
+  height: 800px;
+  background-image: linear-gradient(180deg, #FACD78 0%, rgba(245, 68, 56, 0.91) 100%);
+}
+h1 {
+  opacity: 0;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  margin: 0;
+  font-family: 'Rokkitt', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 109px;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(235, 85, 75, 0.91) 0%, rgba(235, 85, 75, 0.1547) 91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: multiply;
+  text-shadow: 0px 4px 4px rgba(224, 89, 59, 0.62);
+  
+}
+.show {
+  opacity: 1; 
+  transition-property: opacity;
+  transition-duration: 5s;
+}
+.menuButton{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  
+}
+.onClick {
+  /*transform: scale(0.9) translate(-50%, -50%);
+  transition-property: scale;
+  transition-duration: 10ms;
+  */
+  transform: translate(-50%, -50%);
+  animation-name: moves;
+  animation-duration: 0.5s;
+}
+input[type=text] {
+  height: 33px;
+  width: 360px;
+  padding: 0;
+  background-color: rgba(250, 205, 120, 0.51);
+  font-family: 'Rokkitt', serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  color: rgba(224, 89, 59, 0.53);
+  border: none;
+}
+input[type=text]::-webkit-input-placeholder {
+  color: rgba(224, 89, 59, 0.53);
+  padding-left: 20px;
+}
+.add {
+  position: absolute;
+  top: 221px;
+  right: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-bottom: 33px solid rgba(235, 85, 75, 0.17);
+  border-left: 89px solid transparent;
+}
+.add button {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+.todo {
+  margin-top: 37px;
+}
+.todo li {
+padding-bottom: 20px;
+list-style-type: none;
+}
+input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+   }
+  input[type=checkbox], label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer; 
+    color:#F5F5F5;
+    font-family: 'Rokkitt';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+    input[type=checkbox] + label:before {
+      content: '';
+      background: #F5F5F5;
+      border-radius: 3px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 27px;
+      height: 27px;
+      padding: 2px;
+      margin-right: 10px;
+      text-align: center; 
+    }
+    input[type=checkbox]:checked + label:before {
+      content: "";
+      background: #F5F5F5;
+      border-radius: 3px;
+      display: inline-block;
+      width: 27px;
+      height: 27px;
+      }
+       
+      @keyframes click {
+        from {transform: scale(1);
+          
+      }
+      50% {
+      transform: scale(0.9);
+      
+      }
+      to {transform: scale(1);
+          
+      }
+      }
+      @keyframes moves {
+        from {
+          transform: translate(-50%, -50%); 
+      }
+      50% {
+      
+      transform: translate(-45%, -45%);
+      }
+      to {
+        transform: translate(-50%, -50%);  
+      }
+      }
